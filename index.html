@@ -1,158 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jamie Stewart - Java Spring Boot API Developer. Specialized in developing efficient and scalable back-end solutions.">
-    <meta name="keywords" content="Java, Spring Boot, API, Developer, Software Engineer, Back-end Development">
-    <meta name="author" content="Jamie Stewart">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jamie Stewart - Java Spring Boot API Developer. Specialized in developing efficient and scalable back-end solutions."
+    />
+    <meta
+      name="keywords"
+      content="Java, Spring Boot, API, Developer, Software Engineer, Back-end Development"
+    />
+    <meta name="author" content="Jamie Stewart" />
     <title>Jamie Stewart | Java Spring Boot API Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script defer src="script.js"></script>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-R925VE8DKD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader" aria-hidden="true">
+      <div class="spinner"></div>
+    </div>
 
-  gtag('config', 'G-R925VE8DKD');
-</script>
-<body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Jamie Stewart</h1>
-                <p>Java Spring Boot API Developer</p>
-                <label class="switch">
-                    <input type="checkbox" id="dark-mode-toggle">
-                    <span class="slider round"></span>
-                </label>
-            </div>
+    <!-- Scroll Progress Indicator -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <header role="banner" aria-label="Main Header">
+      <div class="container header-container">
+        <div class="header-content">
+          <h1>Jamie Stewart</h1>
+          <p>Java Spring Boot API Developer</p>
+          <div class="header-actions">
+            </a>
+            <label class="switch" title="Toggle Dark Mode">
+              <input type="checkbox" id="dark-mode-toggle" />
+              <span class="slider round"></span>
+            </label>            
+          </div>
         </div>
+      </div>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#professional-projects">Professional Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+
+    <nav role="navigation" aria-label="Main Navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#professional-projects">Professional Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
+
     <main>
-        <section id="about" class="container">
-            <h2>About Me</h2>
-            <p>Hello! I'm Jamie Stewart, a passionate developer specializing in Java Spring Boot APIs. With a strong background in software engineering and a knack for problem-solving, I strive to build efficient and scalable back-end solutions. My journey in tech started with a fascination for how things work and has evolved into a career where I get to solve complex problems and create innovative solutions.</p>
-            <p>I am currently pursuing a Bachelor's degree in Computer Science from Ulster University, Magee Campus, with an expected graduation in 2025. I have experience working with various technologies and industries, and my expertise lies in developing robust, high-performance APIs and microservices using Java and Spring Boot.</p>
-        </section>
-        <section id="skills" class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div>
-                    <h3>Technical Skills</h3>
-                    <ul>
-                        <li>Java</li>
-                        <li>Spring Boot</li>
-                        <li>RESTful APIs</li>
-                        <li>Microservices</li>
-                        <li>Maven</li>
-                        <li>SQL</li>
-                        <li>JSON</li>
-                        <li>Git</li>
-                        <li>CI/CD</li>
-                        <li>Agile Methodologies</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Tools & Frameworks</h3>
-                    <ul>
-                        <li>IntelliJ</li>
-                        <li>Visual Studio Code</li>
-                        <li>WinSCP</li>
-                        <li>PuTTY</li>
-                        <li>Jenkins</li>
-                        <li>Octopus</li>
-                        <li>JUnit</li>
-                        <li>Mockito</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Soft Skills</h3>
-                    <ul>
-                        <li>Effective Communication</li>
-                        <li>Leadership</li>
-                        <li>Quick Learning</li>
-                        <li>Team Collaboration</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="professional-projects" class="container">
-            <h2>Professional Projects</h2>
-            <div class="professional-project">
-                <h3>Policy Search and Retrieve (PSR) API Development</h3>
-                <p>As a Java Spring Boot Developer at Allstate Northern Ireland, I played a key role in developing and maintaining the Policy Search and Retrieve (PSR) APIs. These APIs are crucial for efficiently accessing policy information across various systems. My work involved enhancing existing functionalities, implementing new features, and ensuring the reliability and performance of the APIs. Technologies used included Java, Spring Boot, and REST APIs.</p>
-            </div>
-            <div class="professional-project">
-                <h3>Legacy Systems Modernization</h3>
-                <p>I contributed to the modernization of legacy systems, focusing on migrating and optimizing existing codebases. This project aimed to improve system performance and maintainability, reducing technical debt and ensuring the longevity of critical applications. Technologies used included Java, Linux server management, and various scripting tools.</p>
-            </div>
-            <div class="professional-project">
-                <h3>Linux Server Administration</h3>
-                <p>During my internship, I provided essential support in managing Linux servers, including configuring, monitoring, and maintaining server applications. This role involved ensuring system integrity, security, and optimal performance, which was vital for the stability of our software solutions. Technologies used included Bash scripting, Linux administration tools, and server monitoring solutions.</p>
-            </div>
-        </section>
-        <section id="education" class="container">
-            <h2>Education</h2>
+      <section id="about" class="container section" tabindex="0">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm Jamie Stewart, a passionate developer specializing in Java
+          Spring Boot APIs. With a strong background in software engineering and
+          a knack for problem-solving, I strive to build efficient and scalable
+          back-end solutions.
+        </p>
+        <p>
+          I am currently pursuing a Bachelor's degree in Computer Science from
+          Ulster University, Magee Campus, with an expected graduation in 2025.
+          My expertise lies in developing robust, high-performance APIs and
+          microservices using Java and Spring Boot.
+        </p>
+        <!-- Lazy-loaded image example -->
+        <img
+          src="profile.jpg"
+          alt="Jamie Stewart"
+          loading="lazy"
+          class="profile-image"
+        />
+      </section>
+
+      <section id="skills" class="container section" tabindex="0">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div>
+            <h3>Technical Skills</h3>
             <ul>
-                <li>
-                    <h3>Ulster University - Magee Campus</h3>
-                    <p>BSc (Hons) Computer Science | Expected Graduation 2025</p>
-                    <ul>
-                        <li>Year 1 Average Mark: 75% (Dean's List)</li>
-                        <li>Year 2 Average Mark: 84% (Dean's List)</li>
-                        <li>Nominated for Innovation of Placement Award for work at Allstate</li>
-                    </ul>
-                </li>
-                <li>
-                    <h3>Castlederg High School</h3>
-                    <p>A-Levels: IT (A*), Applied Science (A*), History (B)</p>
-                    <p>Recipient of Riddall and Nicholl Cups for Academic Performance</p>
-                    <p>GCSEs: 9 Grades A-C (Including English, Maths, and Science)</p>
-                </li>
+              <li>
+                <!-- Animated SVG icon with tooltip -->
+                <span class="tooltip" aria-label="Java">
+                  <svg class="icon" viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="30" fill="#f89820" />
+                    <animate
+                      attributeName="r"
+                      from="28"
+                      to="32"
+                      dur="1.5s"
+                      repeatCount="indefinite"
+                    />
+                  </svg>
+                </span>
+                Java
+              </li>
+              <li>Spring Boot</li>
+              <li>RESTful APIs</li>
+              <li>Microservices</li>
+              <li>Maven</li>
+              <li>SQL</li>
+              <li>JSON</li>
+              <li>Git</li>
+              <li>CI/CD</li>
+              <li>Agile Methodologies</li>
             </ul>
-        </section>
-        <section id="experience" class="container">
-            <h2>Experience</h2>
-            <div class="experience">
-                <h3>Software Engineer Intern | Allstate Northern Ireland</h3>
-                <p>June 2023 - Present</p>
-                <p>During my internship at Allstate, I was deeply immersed in the process of modernizing legacy systems and spearheading the development of innovative applications. This hands-on experience allowed me to apply my expertise in Java programming to optimize existing functionalities and implement new features, contributing significantly to the company's technological advancement.</p>
-                <p>In addition to coding, I took on the responsibility of crafting comprehensive test cases to ensure the reliability and efficiency of our software solutions. This meticulous approach not only honed my technical skills but also instilled in me a strong commitment to delivering high-quality products. Furthermore, my role involved providing essential support in managing Linux servers, where I gained valuable experience in maintaining system integrity and security. Collaborating closely with cross-functional teams, I embraced diverse perspectives and fostered effective communication to drive the successful completion of large-scale projects.</p>
-                <p>Overall, my internship at Allstate was a transformative experience that equipped me with invaluable skills and insights, positioning me as a capable and adaptable professional in the field of software engineering.</p>
-                <p>Additional responsibilities included leading Knowledge Transfer (KT) sessions, owning production deployments for PSR APIs, managing Jenkins pipeline deployments, acting as SME/Lead Developer during the lead's absence, supporting external teams with API connections, providing work estimates to project management, and onboarding and mentoring three new developers.</p>
-            </div>
-        </section>
-        <section id="contact" class="container">
-            <h2>Contact Me</h2>
-            <p>If you have any questions or would like to work together, feel free to reach out to me via email or connect with me on LinkedIn.</p>
-            <div class="contact-info">
-                <a href="mailto:jamiestewart271@gmail.com" class="contact-item"><i class="fas fa-envelope"></i> jamiestewart271@gmail.com</a>
-                <a href="https://www.linkedin.com/in/jamie-stewart12/" target="_blank" class="contact-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://github.com/jstewart271" target="_blank" class="contact-item"><i class="fab fa-github"></i> GitHub</a>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Jamie Stewart. All rights reserved.</p>
+          </div>
+          <div>
+            <h3>Tools & Frameworks</h3>
+            <ul>
+              <li>IntelliJ</li>
+              <li>Visual Studio Code</li>
+              <li>WinSCP</li>
+              <li>PuTTY</li>
+              <li>Jenkins</li>
+              <li>Octopus</li>
+              <li>JUnit</li>
+              <li>Mockito</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Effective Communication</li>
+              <li>Leadership</li>
+              <li>Quick Learning</li>
+              <li>Team Collaboration</li>
+            </ul>
+          </div>
         </div>
+      </section>
+
+      <section
+        id="professional-projects"
+        class="container section"
+        tabindex="0"
+      >
+        <h2>Professional Projects</h2>
+        <div class="glass-card">
+          <h3>Policy Search and Retrieve (PSR) API Development</h3>
+          <p>
+            At Allstate Northern Ireland, I developed and maintained the Policy
+            Search and Retrieve APIs to efficiently access policy information
+            across multiple systems.
+          </p>
+        </div>
+        <div class="glass-card">
+          <h3>Legacy Systems Modernization</h3>
+          <p>
+            I contributed to modernizing legacy systems by migrating and
+            optimizing codebases, resulting in improved performance and
+            maintainability.
+          </p>
+        </div>
+        <div class="glass-card">
+          <h3>Linux Server Administration</h3>
+          <p>
+            I provided essential support by configuring, monitoring, and
+            maintaining Linux servers during my internship.
+          </p>
+        </div>
+      </section>
+
+      <section id="education" class="container section" tabindex="0">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <h3>Ulster University - Magee Campus</h3>
+            <p>BSc (Hons) Computer Science | Expected Graduation 2025</p>
+            <ul>
+              <li>Year 1 Average Mark: 75% (Dean's List)</li>
+              <li>Year 2 Average Mark: 84% (Dean's List)</li>
+              <li>Nominated for Innovation of Placement Award</li>
+            </ul>
+          </li>
+          <li>
+            <h3>Castlederg High School</h3>
+            <p>A-Levels: IT (A*), Applied Science (A*), History (B)</p>
+            <p>
+              Recipient of Riddall and Nicholl Cups for Academic Performance
+            </p>
+            <p>GCSEs: 9 Grades A-C (Including English, Maths, and Science)</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Interactive Timeline for Experience -->
+      <section id="experience" class="container section">
+        <h2>Experience</h2>
+        <div class="glass-card">
+          <h3>Software Engineer Intern | Allstate Northern Ireland</h3>
+          <p>June 2023 - Present</p>
+          <p>
+            I contributed to modernizing legacy systems and spearheaded the
+            development of innovative applications. I enhanced functionalities,
+            implemented new features, and ensured high performance across our
+            systems.
+          </p>
+          <p>
+            I also crafted comprehensive test cases, managed Linux servers, led
+            KT sessions, oversaw production deployments, and mentored new
+            developers.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="container section" tabindex="0">
+        <h2>Contact Me</h2>
+        <p>
+          If you have any questions or would like to work together, please reach
+          out via email or connect on LinkedIn.
+        </p>
+        <div class="contact-info">
+          <a
+            href="mailto:jamiestewart271@gmail.com"
+            class="contact-item"
+            title="Email Jamie"
+          >
+            <i class="fas fa-envelope"></i> jamiestewart271@gmail.com
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jamie-stewart12/"
+            target="_blank"
+            class="contact-item"
+            title="Visit my LinkedIn"
+          >
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a
+            href="https://github.com/jstewart271"
+            target="_blank"
+            class="contact-item"
+            title="Visit my GitHub"
+          >
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="container">
+        <p>&copy; 2024 Jamie Stewart. All rights reserved.</p>
+      </div>
     </footer>
-    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
-</body>
+
+    <!-- Back-to-Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <!-- Google Analytics / Tag Manager as before -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-R925VE8DKD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-R925VE8DKD");
+    </script>
+  </body>
 </html>
