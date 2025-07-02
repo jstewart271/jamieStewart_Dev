@@ -1,16 +1,20 @@
 /* Base Variables */
 :root {
-  --background-color: #f8f9fa;
-  --text-color: #333;
-  --header-gradient: linear-gradient(135deg, #667eea, #764ba2);
-  --header-text-color: #fff;
-  --nav-background-color: rgba(0, 0, 0, 0.8);
-  --nav-text-color: #fff;
-  --nav-hover-color: #ff8a65;
-  --container-bg: rgba(255, 255, 255, 0.85);
-  --glass-bg: rgba(255, 255, 255, 0.45);
-  --link-color: #007bff;
-  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --background-color: #121212; /* Deep grey/black background */
+  --text-color: #e0e0e0; /* Light grey text */
+  --header-gradient: linear-gradient(
+    135deg,
+    #000000,
+    #1a1a1a
+  ); /* Black gradient header */
+  --header-text-color: #ffffff; /* Pure white header text */
+  --nav-background-color: #000000; /* Pure black nav */
+  --nav-text-color: #ffffff; /* White nav text */
+  --nav-hover-color: #ff0000; /* MKBHD Red hover */
+  --container-bg: rgba(18, 18, 18, 0.95); /* Almost black containers */
+  --glass-bg: rgba(18, 18, 18, 0.7); /* Slightly transparent dark glass cards */
+  --link-color: #ff0000; /* MKBHD Red links */
+  --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6); /* Darker shadows for depth */
   --transition-speed: 0.3s;
   --border-radius: 8px;
   --font-sans: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -18,13 +22,13 @@
 
 /* Dark Mode */
 body.dark-mode {
-  --background-color: #121212;
+  --background-color: #000000; /* Full black dark mode background */
   --text-color: #e0e0e0;
-  --header-gradient: linear-gradient(135deg, #1e1e1e, #3c3c3c);
-  --nav-background-color: rgba(0, 0, 0, 0.9);
+  --header-gradient: linear-gradient(135deg, #000000, #1a1a1a);
+  --nav-background-color: #000000;
   --container-bg: rgba(0, 0, 0, 0.85);
-  --glass-bg: rgba(0, 0, 0, 0.45);
-  --link-color: #bb86fc;
+  --glass-bg: rgba(0, 0, 0, 0.65);
+  --link-color: #ff0000;
 }
 
 /* Global Styles */
