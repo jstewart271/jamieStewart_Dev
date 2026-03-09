@@ -5,243 +5,606 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Jamie Stewart - Java Spring Boot API Developer. Specialized in developing efficient and scalable back-end solutions."
+      content="Jamie Stewart is a backend software engineer focused on Java, Spring Boot, enterprise APIs, testing, and modernizing legacy systems."
     />
     <meta
       name="keywords"
-      content="Java, Spring Boot, API, Developer, Software Engineer, Back-end Development"
+      content="Jamie Stewart, backend software engineer, Java, Spring Boot, REST APIs, microservices, software engineer, Northern Ireland"
     />
     <meta name="author" content="Jamie Stewart" />
-    <title>Jamie Stewart | Java Spring Boot API Developer</title>
+    <meta name="theme-color" content="#0b7a69" />
+    <meta property="og:title" content="Jamie Stewart | Backend Software Engineer" />
+    <meta
+      property="og:description"
+      content="Java and Spring Boot engineer building reliable APIs for enterprise teams."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jamiestewart.dev/" />
+    <meta property="og:image" content="https://jamiestewart.dev/profile.JPEG" />
+    <link rel="canonical" href="https://jamiestewart.dev/" />
+    <title>Jamie Stewart | Backend Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jamie Stewart",
+        "jobTitle": "Graduate Software Engineer",
+        "url": "https://jamiestewart.dev/",
+        "image": "https://jamiestewart.dev/profile.JPEG",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Allstate Northern Ireland"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Ulster University"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/jamie-stewart12/",
+          "https://github.com/jstewart271"
+        ]
+      }
+    </script>
   </head>
-  <body>
-    <!-- Preloader -->
-    <div id="preloader" aria-hidden="true">
-      <div class="spinner"></div>
-    </div>
-
-    <!-- Scroll Progress Indicator -->
+  <body data-theme="light">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div id="scroll-progress" aria-hidden="true"></div>
 
-    <header role="banner" aria-label="Main Header">
-      <div class="container header-container">
-        <div class="header-content">
-          <h1>Jamie Stewart</h1>
-          <p>Java Spring Boot API Developer</p>
-          <div class="header-actions">
-            <label class="switch" title="Toggle Dark Mode">
-              <input type="checkbox" id="dark-mode-toggle" />
-              <span class="slider round"></span>
-            </label>
+    <div class="topbar-wrap">
+      <div class="container">
+        <div class="topbar">
+          <a class="brand" href="#home" aria-label="Go to home section">
+            <span class="brand-mark">JS</span>
+            <span class="brand-text">Jamie Stewart</span>
+          </a>
+
+          <div class="topbar-actions">
+            <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+              <a href="#strengths" data-nav-link>Why Me</a>
+              <a href="#skills" data-nav-link>Skills</a>
+              <a href="#experience" data-nav-link>Experience</a>
+              <a href="#projects" data-nav-link>Work</a>
+              <a href="#education" data-nav-link>Education</a>
+              <a href="#contact" data-nav-link>Contact</a>
+            </nav>
+
+            <button
+              type="button"
+              class="theme-toggle"
+              id="theme-toggle"
+              aria-label="Switch to dark mode"
+              aria-pressed="false"
+            >
+              <i class="fas fa-moon" aria-hidden="true"></i>
+              <span class="theme-toggle__label">Dark mode</span>
+            </button>
+
+            <button
+              type="button"
+              class="nav-toggle"
+              id="nav-toggle"
+              aria-expanded="false"
+              aria-controls="site-nav"
+              aria-label="Open navigation menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </div>
         </div>
       </div>
+    </div>
+
+    <header class="site-header" id="home" data-section>
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">Backend software engineer</p>
+          <h1>Java and Spring Boot engineer building reliable APIs for enterprise teams.</h1>
+          <p class="hero-summary">
+            First-class Computer Science graduate with distinction in professional
+            practice, currently working as a Graduate Software Engineer at
+            Allstate Northern Ireland. I build backend services, help modernize
+            legacy systems, strengthen test coverage, and support production-ready
+            delivery.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="btn btn-primary"
+              href="https://www.linkedin.com/in/jamie-stewart12/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              View LinkedIn
+              <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+            </a>
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/jstewart271"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Explore GitHub
+            </a>
+            <a class="btn btn-tertiary" href="#contact">Contact</a>
+          </div>
+
+          <ul class="hero-highlights">
+            <li>
+              <i class="fas fa-server" aria-hidden="true"></i>
+              <div>
+                <strong>Enterprise API delivery</strong>
+                <span>Java, Spring Boot, REST APIs, and microservices</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-shield-alt" aria-hidden="true"></i>
+              <div>
+                <strong>Production-minded engineering</strong>
+                <span>Testing, deployments, CI/CD, and Linux support</span>
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-user-graduate" aria-hidden="true"></i>
+              <div>
+                <strong>Strong academic foundation</strong>
+                <span>Ulster University, First-Class Honours, graduated 2025</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="hero-side" data-reveal>
+          <div class="profile-card">
+            <div class="profile-image-wrap">
+              <img
+                src="profile.JPEG"
+                alt="Portrait of Jamie Stewart"
+                loading="lazy"
+                class="profile-image"
+              />
+            </div>
+            <div class="profile-copy">
+              <p class="card-label">Quick profile</p>
+              <h2>Graduate Software Engineer</h2>
+              <p>
+                Backend-focused engineer with experience spanning development,
+                testing, deployment support, and system modernization.
+              </p>
+              <ul class="fact-list">
+                <li>
+                  <i class="fas fa-building" aria-hidden="true"></i>
+                  <span>Allstate Northern Ireland</span>
+                </li>
+                <li>
+                  <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                  <span>Based in Northern Ireland</span>
+                </li>
+                <li>
+                  <i class="fas fa-award" aria-hidden="true"></i>
+                  <span>Distinction in Professional Practice</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="stat-grid">
+            <article class="stat-card">
+              <strong>2+</strong>
+              <span>years with Allstate across internship and graduate roles</span>
+            </article>
+            <article class="stat-card">
+              <strong>2025</strong>
+              <span>graduation year with First-Class Honours</span>
+            </article>
+            <article class="stat-card">
+              <strong>API</strong>
+              <span>focus on backend services and enterprise integrations</span>
+            </article>
+            <article class="stat-card">
+              <strong>CI/CD</strong>
+              <span>comfortable working across build, test, and release flow</span>
+            </article>
+          </div>
+        </aside>
+      </div>
     </header>
 
-    <nav role="navigation" aria-label="Main Navigation">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#professional-projects">Professional Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <main>
-      <section id="about" class="container section" tabindex="0">
-        <h2>About Me</h2>
-        <p>
-          Hello! I'm Jamie Stewart, a passionate developer specializing in Java
-          Spring Boot APIs. With a First-Class Honours degree in Computer
-          Science and a Distinction in Professional Practice, I strive to build
-          efficient and scalable back-end solutions.
-        </p>
-        <p>
-          I have recently graduated from Ulster University, Magee Campus, and am
-          now working as a Graduate Software Engineer at Allstate Northern
-          Ireland, where I develop robust, high-performance APIs and
-          microservices using Java and Spring Boot.
-        </p>
-        <img
-          src="profile.JPEG"
-          alt="Jamie Stewart"
-          loading="lazy"
-          class="profile-image"
-        />
-      </section>
-
-      <section id="skills" class="container section" tabindex="0">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-          <div>
-            <h3>Technical Skills</h3>
-            <ul>
-              <li>Java</li>
-              <li>Spring Boot</li>
-              <li>RESTful APIs</li>
-              <li>Microservices</li>
-              <li>Maven</li>
-              <li>SQL</li>
-              <li>JSON</li>
-              <li>Git</li>
-              <li>CI/CD</li>
-              <li>Agile Methodologies</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Tools & Frameworks</h3>
-            <ul>
-              <li>IntelliJ</li>
-              <li>Visual Studio Code</li>
-              <li>WinSCP</li>
-              <li>PuTTY</li>
-              <li>Jenkins</li>
-              <li>Octopus</li>
-              <li>JUnit</li>
-              <li>Mockito</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Soft Skills</h3>
-            <ul>
-              <li>Effective Communication</li>
-              <li>Leadership</li>
-              <li>Quick Learning</li>
-              <li>Team Collaboration</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="professional-projects"
-        class="container section"
-        tabindex="0"
-      >
-        <h2>Professional Projects</h2>
-        <div class="glass-card">
-          <h3>Policy Search and Retrieve (PSR) API Development</h3>
-          <p>
-            At Allstate Northern Ireland, I developed and maintained the Policy
-            Search and Retrieve APIs to efficiently access policy information
-            across multiple systems.
-          </p>
-        </div>
-        <div class="glass-card">
-          <h3>Legacy Systems Modernization</h3>
-          <p>
-            I contributed to modernizing legacy systems by migrating and
-            optimizing codebases, resulting in improved performance and
-            maintainability.
-          </p>
-        </div>
-        <div class="glass-card">
-          <h3>Linux Server Administration</h3>
-          <p>
-            I provided essential support by configuring, monitoring, and
-            maintaining Linux servers during my internship.
-          </p>
-        </div>
-      </section>
-
-      <section id="education" class="container section" tabindex="0">
-        <h2>Education</h2>
-        <ul>
-          <li>
-            <h3>Ulster University – Magee Campus</h3>
-            <p>
-              BSc (Hons) Computer Science | First Class Honours | Graduated 2025
+    <main id="main-content">
+      <section class="content-section" id="strengths" data-section data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-label">Why me</p>
+              <h2>Built for teams that need dependable backend delivery.</h2>
+            </div>
+            <p class="section-copy">
+              Recruiters and hiring managers do not need a generic skills wall.
+              They need signal. This page is organized around the areas where I
+              add value most: building APIs, improving legacy systems, and
+              helping software ship cleanly.
             </p>
-            <ul>
-              <li>
-                Distinction in Professional Practice (Industrial Placement)
-              </li>
-              <li>Nominated for Innovation of Placement Award</li>
-            </ul>
-          </li>
-          <li>
-            <h3>Castlederg High School</h3>
-            <p>A-Levels: IT (A*), Applied Science (A*), History (B)</p>
-            <p>Recipient of Riddall and Nicholl Cups for Academic Excellence</p>
-            <p>GCSEs: 9 Grades A-C (including English, Maths, and Science)</p>
-          </li>
-        </ul>
-      </section>
+          </div>
 
-      <section id="experience" class="container section">
-        <h2>Experience</h2>
-        <div class="glass-card">
-          <h3>Graduate Software Engineer | Allstate Northern Ireland</h3>
-          <p>July 2025 - Present</p>
-          <p>
-            I have started my role as a Graduate Software Engineer, continuing
-            to build upon my previous internship contributions. My work involves
-            developing and maintaining enterprise-level Java Spring Boot APIs,
-            modernizing legacy systems, and ensuring scalable back-end solutions
-            for mission-critical applications.
-          </p>
-        </div>
-        <div class="glass-card">
-          <h3>Software Engineer Intern | Allstate Northern Ireland</h3>
-          <p>June 2023 - June 2025</p>
-          <p>
-            I contributed to modernizing legacy systems and spearheaded the
-            development of innovative applications. I enhanced functionalities,
-            implemented new features, and ensured high performance across our
-            systems.
-          </p>
-          <p>
-            I also crafted comprehensive test cases, managed Linux servers, led
-            KT sessions, oversaw production deployments, and mentored new
-            developers.
-          </p>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-network-wired" aria-hidden="true"></i>
+              </div>
+              <h3>API-first engineering</h3>
+              <p>
+                I work on Java and Spring Boot services that prioritize reliable
+                contracts, maintainable code, and clean integration with larger
+                enterprise systems.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-cogs" aria-hidden="true"></i>
+              </div>
+              <h3>Legacy modernization</h3>
+              <p>
+                I have contributed to modernizing legacy applications by improving
+                code quality, maintainability, and delivery confidence without
+                losing sight of operational reality.
+              </p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-rocket" aria-hidden="true"></i>
+              </div>
+              <h3>Delivery beyond coding</h3>
+              <p>
+                My experience includes JUnit and Mockito testing, Linux support,
+                deployment assistance, knowledge transfer, and mentoring newer
+                developers.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="contact" class="container section" tabindex="0">
-        <h2>Contact Me</h2>
-        <p>
-          If you have any questions or would like to work together, please
-          connect with me on LinkedIn or GitHub.
-        </p>
-        <div class="contact-info">
-          <a
-            href="https://www.linkedin.com/in/jamie-stewart12/"
-            target="_blank"
-            class="contact-item"
-            title="Visit my LinkedIn"
-          >
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a
-            href="https://github.com/jstewart271"
-            target="_blank"
-            class="contact-item"
-            title="Visit my GitHub"
-          >
-            <i class="fab fa-github"></i> GitHub
-          </a>
+      <section class="content-section" id="skills" data-section data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-label">Skills</p>
+              <h2>The stack I use to ship backend software.</h2>
+            </div>
+            <p class="section-copy">
+              Broad enough to work across the delivery lifecycle, focused enough
+              to stay strongest in Java, Spring Boot, and API development.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <article class="skill-card">
+              <h3>Backend engineering</h3>
+              <div class="pill-row">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>REST APIs</span>
+                <span>Microservices</span>
+                <span>JSON</span>
+                <span>SQL</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <h3>Quality and delivery</h3>
+              <div class="pill-row">
+                <span>JUnit</span>
+                <span>Mockito</span>
+                <span>Git</span>
+                <span>CI/CD</span>
+                <span>Agile</span>
+                <span>Production support</span>
+              </div>
+            </article>
+
+            <article class="skill-card">
+              <h3>Tooling and platform</h3>
+              <div class="pill-row">
+                <span>Maven</span>
+                <span>Jenkins</span>
+                <span>Octopus</span>
+                <span>Linux</span>
+                <span>IntelliJ</span>
+                <span>VS Code</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="experience" data-section data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-label">Experience</p>
+              <h2>Progression from internship to graduate engineer.</h2>
+            </div>
+            <p class="section-copy">
+              The through-line in my experience is ownership: learning fast,
+              improving systems, and helping teams deliver stable backend
+              software.
+            </p>
+          </div>
+
+          <div class="experience-stack">
+            <article class="experience-card">
+              <div class="experience-marker" aria-hidden="true"></div>
+              <div class="experience-content">
+                <div class="experience-header">
+                  <div>
+                    <p class="card-label">Current role</p>
+                    <h3>Graduate Software Engineer</h3>
+                  </div>
+                  <div class="experience-meta">
+                    <span>Allstate Northern Ireland</span>
+                    <span>July 2025 - Present</span>
+                  </div>
+                </div>
+                <ul class="bullet-list">
+                  <li>
+                    Develop and maintain enterprise Java and Spring Boot APIs for
+                    backend services and policy-related workflows.
+                  </li>
+                  <li>
+                    Contribute to legacy modernization efforts to improve system
+                    maintainability and long-term delivery confidence.
+                  </li>
+                  <li>
+                    Support production-ready engineering through testing,
+                    collaboration, and release-minded development practices.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="experience-card">
+              <div class="experience-marker" aria-hidden="true"></div>
+              <div class="experience-content">
+                <div class="experience-header">
+                  <div>
+                    <p class="card-label">Earlier role</p>
+                    <h3>Software Engineer Intern</h3>
+                  </div>
+                  <div class="experience-meta">
+                    <span>Allstate Northern Ireland</span>
+                    <span>June 2023 - June 2025</span>
+                  </div>
+                </div>
+                <ul class="bullet-list">
+                  <li>
+                    Added new backend features, improved existing systems, and
+                    helped modernize legacy platforms during day-to-day delivery.
+                  </li>
+                  <li>
+                    Wrote test cases, supported Linux servers, and assisted with
+                    deployments in a live enterprise environment.
+                  </li>
+                  <li>
+                    Led knowledge transfer sessions and helped mentor newer
+                    developers as part of a collaborative engineering culture.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="projects" data-section data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-label">Selected work</p>
+              <h2>Projects that show how I operate inside real teams.</h2>
+            </div>
+            <p class="section-copy">
+              These are not vanity projects. They are examples of the kind of
+              backend and delivery work I have contributed to in a professional
+              setting.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <p class="card-label">Enterprise APIs</p>
+              <h3>Policy Search and Retrieve APIs</h3>
+              <p>
+                Helped develop and maintain APIs used to access policy
+                information across multiple systems, with a focus on reliability,
+                maintainability, and backend clarity.
+              </p>
+              <div class="pill-row">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>REST</span>
+                <span>Enterprise integration</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <p class="card-label">Modernization</p>
+              <h3>Legacy systems improvement</h3>
+              <p>
+                Contributed to modernizing older codebases by improving structure,
+                performance, and maintainability so teams could deliver with less
+                friction and more confidence.
+              </p>
+              <div class="pill-row">
+                <span>Refactoring</span>
+                <span>Maintainability</span>
+                <span>Performance</span>
+                <span>Team delivery</span>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <p class="card-label">Delivery support</p>
+              <h3>Testing, Linux, and release readiness</h3>
+              <p>
+                Supported the software lifecycle beyond implementation, including
+                test creation, Linux administration, deployment help, and
+                knowledge sharing inside the team.
+              </p>
+              <div class="pill-row">
+                <span>JUnit</span>
+                <span>Mockito</span>
+                <span>Linux</span>
+                <span>Deployments</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="section-cta">
+            <a
+              class="inline-link"
+              href="https://github.com/jstewart271"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Review public code on GitHub
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="education" data-section data-reveal>
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-label">Education</p>
+              <h2>A strong academic base, then applied in industry.</h2>
+            </div>
+            <p class="section-copy">
+              The academic foundation matters, but what makes it valuable is how
+              quickly it was translated into real delivery work.
+            </p>
+          </div>
+
+          <div class="education-grid">
+            <article class="education-card education-card--primary">
+              <p class="card-label">Degree</p>
+              <h3>BSc (Hons) Computer Science</h3>
+              <p class="education-subtitle">Ulster University, Magee Campus</p>
+              <div class="pill-row">
+                <span>First-Class Honours</span>
+                <span>Graduated 2025</span>
+                <span>Distinction in Professional Practice</span>
+              </div>
+            </article>
+
+            <article class="education-card">
+              <p class="card-label">Recognition</p>
+              <ul class="bullet-list">
+                <li>Nominated for the Innovation of Placement Award.</li>
+                <li>Strong academic record across computing and applied science.</li>
+                <li>Recipient of school awards for academic excellence.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section content-section--contact" id="contact" data-section data-reveal>
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-copy">
+              <p class="section-label">Contact</p>
+              <h2>Make the next conversation easy.</h2>
+              <p class="section-copy">
+                If you are hiring for backend, API, or platform-facing software
+                engineering work, LinkedIn is the fastest way to reach me. GitHub
+                is the best place to review my public code and technical
+                interests.
+              </p>
+
+              <div class="hero-actions">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.linkedin.com/in/jamie-stewart12/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Message on LinkedIn
+                </a>
+                <a
+                  class="btn btn-secondary"
+                  href="https://github.com/jstewart271"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  Open GitHub
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-rail">
+              <a
+                class="contact-card"
+                href="https://www.linkedin.com/in/jamie-stewart12/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <p>Best path for recruiter outreach and role discussions.</p>
+                </div>
+              </a>
+
+              <a
+                class="contact-card"
+                href="https://github.com/jstewart271"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <i class="fab fa-github" aria-hidden="true"></i>
+                <div>
+                  <strong>GitHub</strong>
+                  <p>Useful for reviewing code samples and personal work.</p>
+                </div>
+              </a>
+
+              <div class="contact-card contact-card--static">
+                <i class="fas fa-briefcase" aria-hidden="true"></i>
+                <div>
+                  <strong>Current focus</strong>
+                  <p>Java, Spring Boot, APIs, testing, and legacy modernization.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer role="contentinfo">
+    <footer class="site-footer">
       <div class="container">
-        <p>&copy; 2025 Jamie Stewart. All rights reserved.</p>
+        <p>
+          &copy; <span id="current-year">2026</span> Jamie Stewart. Backend
+          software engineer focused on Java, Spring Boot, and dependable APIs.
+        </p>
       </div>
     </footer>
-
-    <button id="back-to-top" aria-label="Back to top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
 
     <script src="script.js"></script>
     <script
