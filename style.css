@@ -353,8 +353,12 @@ button {
     border-color var(--transition);
 }
 
-[data-reveal],
-[data-reveal].is-visible {
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.js [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
 }
@@ -962,15 +966,18 @@ main {
     background: var(--surface-strong);
     box-shadow: var(--shadow);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transform: translateY(-8px);
     transition:
       opacity var(--transition),
-      transform var(--transition);
+      transform var(--transition),
+      visibility var(--transition);
   }
 
   .site-nav.is-open {
     opacity: 1;
+    visibility: visible;
     pointer-events: auto;
     transform: translateY(0);
   }
@@ -981,6 +988,26 @@ main {
 
   .theme-toggle__label {
     display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
   }
 }
 

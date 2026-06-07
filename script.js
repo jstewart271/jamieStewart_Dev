@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
   const progressBar = document.getElementById("scroll-progress");
@@ -11,6 +13,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = Array.from(document.querySelectorAll("[data-section]"));
   const currentYear = document.getElementById("current-year");
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+  const storageKey = "theme";
+
+  const getSavedTheme = () => {
+    try {
+      return localStorage.getItem(storageKey);
+    } catch {
+      return null;
+    }
+  };
+
+  const saveTheme = (theme) => {
+    try {
+      localStorage.setItem(storageKey, theme);
+    } catch {
+      // The selected theme still applies for the current page session.
+    }
+  };
 
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
@@ -22,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     body.dataset.theme = theme;
 
     if (persist) {
-      localStorage.setItem("theme", theme);
+      saveTheme(theme);
     }
 
     if (themeToggle) {
@@ -43,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  const savedTheme = localStorage.getItem("theme");
+  const savedTheme = getSavedTheme();
   const preferredTheme = savedTheme || (systemTheme.matches ? "dark" : "light");
   applyTheme(preferredTheme, Boolean(savedTheme));
 
@@ -54,13 +73,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  systemTheme.addEventListener("change", (event) => {
-    if (!localStorage.getItem("theme")) {
+  const handleSystemThemeChange = (event) => {
+    if (!getSavedTheme()) {
       applyTheme(event.matches ? "dark" : "light", false);
     }
-  });
+  };
 
-  const setNavOpen = (isOpen) => {
+  if (typeof systemTheme.addEventListener === "function") {
+    systemTheme.addEventListener("change", handleSystemThemeChange);
+  } else {
+    systemTheme.addListener(handleSystemThemeChange);
+  }
+
+  const setNavOpen = (isOpen, returnFocus = false) => {
     if (!siteNav || !navToggle) {
       return;
     }
@@ -72,6 +97,12 @@ document.addEventListener("DOMContentLoaded", () => {
       isOpen ? "Close navigation menu" : "Open navigation menu"
     );
     body.classList.toggle("nav-open", isOpen && window.innerWidth <= 860);
+
+    if (isOpen && window.innerWidth <= 860) {
+      navLinks[0]?.focus();
+    } else if (returnFocus) {
+      navToggle.focus();
+    }
   };
 
   if (navToggle) {
@@ -104,21 +135,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-      setNavOpen(false);
+      const wasOpen = navToggle?.getAttribute("aria-expanded") === "true";
+      setNavOpen(false, wasOpen);
     }
   });
 
   window.addEventListener("resize", () => {
     if (window.innerWidth > 860) {
-      body.classList.remove("nav-open");
-      if (siteNav) {
-        siteNav.classList.remove("is-open");
-      }
-      if (navToggle) {
-        navToggle.setAttribute("aria-expanded", "false");
-      }
+      setNavOpen(false);
     }
   });
+
+  let progressUpdatePending = false;
 
   const updateProgress = () => {
     if (!progressBar) {
@@ -131,10 +159,19 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollableHeight > 0 ? (window.scrollY / scrollableHeight) * 100 : 0;
 
     progressBar.style.width = `${progress}%`;
+    progressUpdatePending = false;
+  };
+
+  const requestProgressUpdate = () => {
+    if (!progressUpdatePending) {
+      progressUpdatePending = true;
+      window.requestAnimationFrame(updateProgress);
+    }
   };
 
   updateProgress();
-  window.addEventListener("scroll", updateProgress, { passive: true });
+  window.addEventListener("scroll", requestProgressUpdate, { passive: true });
+  window.addEventListener("resize", requestProgressUpdate);
 
   if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver(
@@ -169,6 +206,12 @@ document.addEventListener("DOMContentLoaded", () => {
         navLinks.forEach((link) => {
           const isActive = link.getAttribute("href") === `#${activeId}`;
           link.classList.toggle("active", isActive);
+
+          if (isActive) {
+            link.setAttribute("aria-current", "location");
+          } else {
+            link.removeAttribute("aria-current");
+          }
         });
       },
       {
